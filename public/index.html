@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#AD0101"><meta name="apple-mobile-web-app-capable" content="yes">
+<title>SU Portal — Usulan & Laporan Kegiatan</title>
+<link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icons/icon-192.png"><link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+
+<section id="login"><div class="lbox">
+<div class="intro"><video id="introv" autoplay muted loop playsinline preload="auto" poster="media/su-intro-poster.jpg" aria-label="Students' Union Universitas Mikroskil"><source src="media/su-intro.mp4" type="video/mp4"></video></div>
+<div class="motto">WE ARE TRENDSETTER, NOT FOLLOWER</div>
+<div class="tabs"><button id="tU" class="on">SC / SS / HMPS</button><button id="tA">Admin SU</button></div>
+<div class="card">
+<div id="fU"><label>Pilih organisasi</label><select id="lorg"></select><label>PIN</label><input id="lpin" type="password" inputmode="numeric" autocomplete="off" placeholder="PIN organisasi"><div id="lhint" style="font-size:12px;color:var(--mu);margin-top:4px"></div></div>
+<div id="fA" class="hide"><label>PIN Admin SU</label><input id="apin" type="password" autocomplete="off"></div>
+<div class="err" id="lerr"></div><button class="btn r" id="lgo" style="width:100%;margin-top:6px">Masuk</button></div>
+<div class="foot">Students' Union 2026</div></div></section>
+
+<section id="app" class="hide">
+<div class="top"><img id="tlogo" alt=""><div><b id="tname"></b><div style="font-size:12px;color:var(--mu)" id="trole"></div></div><span class="sp"></span>
+<button class="btn g s" id="binst" class="hide">⬇ Pasang</button><button class="btn g s" id="bhome">Beranda</button><button class="btn g s" id="bout">Keluar</button></div>
+<div class="wrap" id="main"></div><div class="foot">Students' Union 2026 · We are trendsetter, not follower</div></section>
+
+
+<script src="vendor/docx.umd.js"></script>
+<script src="vendor/html2pdf.bundle.min.js"></script>
+<script src="logos.js"></script>
+<script src="db.js"></script>
+<script>(function(){var v=document.getElementById('introv');if(v&&matchMedia('(prefers-reduced-motion:reduce)').matches){v.removeAttribute('autoplay');v.removeAttribute('loop');v.pause()}})()</script>
+<script src="app.js"></script>
+</body></html>
